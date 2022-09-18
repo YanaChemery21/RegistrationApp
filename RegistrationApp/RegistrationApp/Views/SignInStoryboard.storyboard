@@ -26,18 +26,22 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Create new account">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VNf-vn-rkh" kind="show" id="Ooq-nv-SJi"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="9N7-Pu-oXe">
-                                <rect key="frame" x="25" y="296" width="364" height="358"/>
+                                <rect key="frame" x="25" y="295.5" width="364" height="359"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roN-o9-Lep">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" red="1" green="0.74501214493274803" blue="0.9670739856831182" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.71428925634741547" green="0.76133701350462468" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cpq-3S-YxF">
-                                        <rect key="frame" x="0.0" y="108" width="364" height="34"/>
+                                        <rect key="frame" x="0.0" y="109" width="364" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-Mn-AYW">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
@@ -53,7 +57,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zq8-CY-sMp">
-                                        <rect key="frame" x="0.0" y="208" width="364" height="34"/>
+                                        <rect key="frame" x="0.0" y="209" width="364" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N24-Xp-URS">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
@@ -69,9 +73,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="55g-gn-kvd">
-                                        <rect key="frame" x="0.0" y="308" width="364" height="50"/>
+                                        <rect key="frame" x="0.0" y="309" width="364" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjY-s1-Tpg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjY-s1-Tpg">
                                                 <rect key="frame" x="107" y="0.0" width="150" height="50"/>
                                                 <color key="backgroundColor" red="0.86078917980000003" green="0.69011921529999998" blue="0.77104169899999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -86,7 +90,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="Vmc-rO-YYn" kind="show" id="Q0Y-r9-wyQ"/>
+                                                    <action selector="signInAction" destination="cBX-Ih-p4h" eventType="touchUpInside" id="KPZ-aT-hrd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -111,11 +115,22 @@
                         <outlet property="errorLEmailbl" destination="dfZ-dw-7n6" id="qfj-lh-cva"/>
                         <outlet property="errorPass" destination="UfJ-yG-sFL" id="WRA-Fq-NBP"/>
                         <outlet property="passTF" destination="N24-Xp-URS" id="ofN-mw-TNl"/>
+                        <segue destination="Vmc-rO-YYn" kind="show" identifier="goToMain" id="eoH-fe-olE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lf-Ve-vVF" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="642.02898550724638" y="71.651785714285708"/>
+        </scene>
+        <!--SignUpStoryboard-->
+        <scene sceneID="eTX-ce-lSn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUpStoryboard" id="VNf-vn-rkh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ODQ-cL-u5B"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qR-MR-3fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360" y="-109"/>
         </scene>
         <!--Main-->
         <scene sceneID="nEu-hN-uOE">

@@ -8,21 +8,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="UWz-Sb-ZE1">
             <objects>
-                <viewController id="wuY-W0-OFr" sceneMemberID="viewController">
+                <viewController id="wuY-W0-OFr" customClass="ProfileVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="To5-0a-vpN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrk-Iv-veU">
+                                <rect key="frame" x="279" y="136" width="72" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LogOut"/>
+                                <connections>
+                                    <action selector="logOutAction:" destination="wuY-W0-OFr" eventType="touchUpInside" id="fAL-a0-YoD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGH-gu-TOO">
+                                <rect key="frame" x="146" y="692" width="122" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete account"/>
+                                <connections>
+                                    <action selector="deleteAccountAction" destination="wuY-W0-OFr" eventType="touchUpInside" id="ohe-af-lEE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="1zg-Pz-eOW">
+                                <rect key="frame" x="25" y="316" width="364" height="225.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9md-yL-OQk">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-4h-3He">
+                                        <rect key="frame" x="0.0" y="102.5" width="364" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5r-uF-La2">
+                                        <rect key="frame" x="0.0" y="205" width="364" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88849357770000004" green="0.77784383980000005" blue="0.89124919459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGo-PJ-6CV">
+                                <rect key="frame" x="254" y="189" width="121" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edite user data"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kCA-KV-Htr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1zg-Pz-eOW" firstAttribute="centerX" secondItem="kCA-KV-Htr" secondAttribute="centerX" id="2gk-Bd-P3d"/>
+                            <constraint firstItem="kCA-KV-Htr" firstAttribute="trailing" secondItem="1zg-Pz-eOW" secondAttribute="trailing" constant="25" id="6zX-It-7J7"/>
+                            <constraint firstItem="1zg-Pz-eOW" firstAttribute="centerY" secondItem="kCA-KV-Htr" secondAttribute="centerY" id="HWd-kp-8Of"/>
+                            <constraint firstItem="kCA-KV-Htr" firstAttribute="trailing" secondItem="xrk-Iv-veU" secondAttribute="trailing" constant="63" id="L2o-3g-y94"/>
+                            <constraint firstItem="dGo-PJ-6CV" firstAttribute="top" secondItem="kCA-KV-Htr" secondAttribute="top" constant="145" id="ODu-MU-YlL"/>
+                            <constraint firstItem="kCA-KV-Htr" firstAttribute="trailing" secondItem="dGo-PJ-6CV" secondAttribute="trailing" constant="38" id="Um5-6g-1ob"/>
+                            <constraint firstItem="pGH-gu-TOO" firstAttribute="centerX" secondItem="kCA-KV-Htr" secondAttribute="centerX" id="kq2-gG-Sne"/>
+                            <constraint firstItem="xrk-Iv-veU" firstAttribute="top" secondItem="kCA-KV-Htr" secondAttribute="top" constant="92" id="r62-wR-ie1"/>
+                            <constraint firstItem="kCA-KV-Htr" firstAttribute="bottom" secondItem="pGH-gu-TOO" secondAttribute="bottom" constant="90" id="x6E-as-m8E"/>
+                            <constraint firstItem="1zg-Pz-eOW" firstAttribute="leading" secondItem="kCA-KV-Htr" secondAttribute="leading" constant="25" id="xfh-7r-Mxn"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="szO-bY-cal"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="szO-bY-cal"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="9md-yL-OQk" id="QG5-8I-5Wn"/>
+                        <outlet property="nameLbl" destination="vbM-4h-3He" id="cLo-P9-doH"/>
+                        <outlet property="passwordLbl" destination="T5r-uF-La2" id="b4L-MU-KgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6I-3B-3ds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="408"/>
+            <point key="canvasLocation" x="592.75362318840587" y="407.8125"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="rK1-uq-M1n">
@@ -60,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

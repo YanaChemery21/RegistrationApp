@@ -17,11 +17,27 @@ class SignInVC: UIViewController {
     @IBOutlet weak var errorPass: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        isLoggedUser()
+        hideKeyboardWhenTappedAround()
     }
     
-
+    @IBAction func signInAction() {
+        if let email = emailTF.text,
+           let pass = passTF.text,
+           let userModel = userDefaultsService.getUserModel(),
+           email == userModel.email,
+           pass == userModel.pass {
+            performSegue(withIdentifier: "goToMain", sender: nil)
+        }
+    }
+    
+    private func isLoggedUser(){
+        if let _ = userDefaultsService.getUserModel(){
+            performSegue(withIdentifier: "goToMain", sender: nil)
+        }
+    }
+   
+   
     /*
     // MARK: - Navigation
 
